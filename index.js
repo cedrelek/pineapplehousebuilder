@@ -5,7 +5,8 @@ angular.module("ZomeBuilder", ["GeneralShapeModule",
                                "ZomeDefinitionModule",
                                "WallDefinitionModule",
                                "ZomeValidationModule",
-                               "ZomeEdgeViewModule"])
+                               "ZomeEdgeViewModule",
+                               "LogDimensionModule"])
   .directive("generalShapeComp", function() {
     return {
       templateUrl: 'components/generalShape.html',
@@ -39,5 +40,12 @@ angular.module("ZomeBuilder", ["GeneralShapeModule",
       templateUrl : 'components/zomeEdgeView.html',
       restrict: 'E',
       replace: true
+    }
+  })
+  .directive("logDimensionComp", function() {
+    return {
+      templateUrl : 'components/logDimension.html',
+      restrict: 'E',
+      replace : true
     }
   });
